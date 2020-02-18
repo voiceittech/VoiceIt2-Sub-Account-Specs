@@ -39,6 +39,9 @@ curl -u "[MASTER API KEY]:[MASTER API TOKEN]" -F "firstName=John" -F "lastName=D
 }
 ```
 
+### Cost
+$4
+
 ## Usage
 
 ### Create User
@@ -46,6 +49,9 @@ curl -u "[MASTER API KEY]:[MASTER API TOKEN]" -F "firstName=John" -F "lastName=D
 ```
 curl -u "[SUB ACCOUNT API KEY]:[SUB ACCOUNT API TOKEN]" -X POST "https://api.voiceit.io/users"
 ```
+
+### Cost
+(same as normal create user call done under the master account)
 
 ## Delete Sub-Account
 
@@ -64,3 +70,6 @@ curl -u "[MASTER API KEY]:[MASTER API TOKEN]" -X DELETE https://api.voiceit.io/s
 	"status": 200
 }
 ```
+
+### Cost
+Same as Other call type (see [our pricing page](https://voiceit.io/pricing))
