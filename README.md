@@ -48,7 +48,7 @@ $4
 
 ## Usage
 
-### Create User
+### Create User (`curl`)
 
 ```
 curl -u "[SUB ACCOUNT API KEY]:[SUB ACCOUNT API TOKEN]" -X POST "https://api.voiceit.io/users"
