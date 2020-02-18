@@ -4,6 +4,8 @@ Sub accounts are fully independent developer accounts which have access to all o
 The difference is that the funds used are subtracted from the master account. They are created and deleted via API calls to API 2.
 Since they are full accounts, they can log into all VoiceIt related websites like [voiceit.io](voiceit.io) and [dashboard.voiceit.io](dashboard.voiceit.io).
 
+---
+
 ## Create Sub-Account
 
 HTTP POST to `https://api.voiceit.io/subaccount/managed`
@@ -42,6 +44,8 @@ curl -u "[MASTER API KEY]:[MASTER API TOKEN]" -F "firstName=John" -F "lastName=D
 ### Cost
 $4
 
+---
+
 ## Usage
 
 ### Create User
@@ -52,6 +56,33 @@ curl -u "[SUB ACCOUNT API KEY]:[SUB ACCOUNT API TOKEN]" -X POST "https://api.voi
 
 ### Cost
 same as normal calls done under the master account but charged to the master account (see [our pricing page](https://voiceit.io/pricing))
+
+---
+
+## Regenerate Sub-Account API Token
+
+### `curl`
+
+```
+curl -u "[MASTER API KEY]:[MASTER API TOKEN]" -X POST https://api.voiceit.io/subaccount/managed/key_bd3ed09bbcca462b8bd89bd127efd632
+```
+
+### Example JSON response
+
+```json
+{
+	"timeTaken": "0.091s",
+	"apiToken": "tok_c7ca6c5cb951414db0291d4c8965cc95",
+	"message": "Regenerated apiToken : tok_c7ca6c5cb951414db0291d4c8965cc95 for sub-account with apiKey : key_bd3ed09bbcca462b8bd89bd127efd632",
+	"responseCode": "SUCC",
+	"status": 200
+}
+```
+
+### Cost
+Same as Other call type (see [our pricing page](https://voiceit.io/pricing))
+
+---
 
 ## Delete Sub-Account
 
