@@ -51,7 +51,7 @@ curl -u "[SUB ACCOUNT API KEY]:[SUB ACCOUNT API TOKEN]" -X POST "https://api.voi
 ```
 
 ### Cost
-(same as normal create user call done under the master account)
+same as normal calls done under the master account but charged to the master account (see [our pricing page](https://voiceit.io/pricing))
 
 ## Delete Sub-Account
 
