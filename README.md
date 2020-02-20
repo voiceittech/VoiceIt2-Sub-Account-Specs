@@ -42,7 +42,7 @@ curl -u "[MASTER API KEY]:[MASTER API TOKEN]" -F "firstName=John" -F "lastName=D
 ```
 
 ### Cost
-$4
+$0
 
 ---
 
