@@ -34,6 +34,8 @@ curl -u "[MASTER API KEY]:[MASTER API TOKEN]" -F "firstName=John" -F "lastName=D
 	"password": "thisisapassword",
 	"apiToken": "tok_7ea49bdea43f45a4a58d9109fbdbd471",
 	"apiKey": "key_bd3ed09bbcca462b8bd89bd127efd632",
+	"emailValidationRequired": true,
+	"type": "managed",
 	"contentLanguage": "en-US",
 	"message": "Created new managed sub-account with apiKey : key_bd3ed09bbcca462b8bd89bd127efd632",
 	"email": "someemail@domain.com",
@@ -74,6 +76,8 @@ curl -u "[MASTER API KEY]:[MASTER API TOKEN]" -F "firstName=John" -F "lastName=D
 	"password": "thisisapassword",
 	"apiToken": "tok_7ea49bdea43f45a4a58d9109fbdbd471",
 	"apiKey": "key_bd3ed09bbcca462b8bd89bd127efd632",
+	"emailValidationRequired": true,
+	"type": "managed",
 	"contentLanguage": "en-US",
 	"message": "Created new unmanaged sub-account with apiKey : key_bd3ed09bbcca462b8bd89bd127efd632",
 	"email": "someemail@domain.com",
@@ -138,6 +142,36 @@ curl -u "[MASTER API KEY]:[MASTER API TOKEN]" -X DELETE https://api.voiceit.io/s
 {
 	"timeTaken": "0.315s",
 	"message": "Deleted sub-account with apiKey : key_bd3ed09bbcca462b8bd89bd127efd632",
+	"responseCode": "SUCC",
+	"status": 200
+}
+```
+
+### Cost
+Same as Other call type (see [our pricing page](https://voiceit.io/pricing))
+
+---
+
+## Change Sub-Account Type
+
+This will turn a Managed Sub-Account to Unmanaged, and Unmanaged Sub-Account to Managed
+
+HTTP POST to `https://api.voiceit.io/subaccount/[sub-account API Key]/switchType`
+
+### Optional Parameters
+
+### `curl`
+
+```
+curl -u "[MASTER API KEY]:[MASTER API TOKEN]" -X POST https://api.voiceit.io/subaccount/key_bd3ed09bbcca462b8bd89bd127efd632/switchType
+```
+
+### Example JSON response
+```json
+{
+	"timeTaken": "0.025s",
+	"type": "managed",
+	"message": "Switched sub-account developer with apiKey : key_bd3ed09bbcca462b8bd89bd127efd632 to managed",
 	"responseCode": "SUCC",
 	"status": 200
 }
