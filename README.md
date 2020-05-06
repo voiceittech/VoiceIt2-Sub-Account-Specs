@@ -77,7 +77,7 @@ curl -u "[MASTER API KEY]:[MASTER API TOKEN]" -F "firstName=John" -F "lastName=D
 	"apiToken": "tok_7ea49bdea43f45a4a58d9109fbdbd471",
 	"apiKey": "key_bd3ed09bbcca462b8bd89bd127efd632",
 	"emailValidationRequired": true,
-	"type": "managed",
+	"type": "unmanaged",
 	"contentLanguage": "en-US",
 	"message": "Created new unmanaged sub-account with apiKey : key_bd3ed09bbcca462b8bd89bd127efd632",
 	"email": "someemail@domain.com",
